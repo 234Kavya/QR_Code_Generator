@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate QR Code</title>
+    <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        text-align: center;
+    }
+    form {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+    input[type="text"] {
+        width: 60%;
+        padding: 8px;
+        font-size: 16px;
+    }
+    button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        border: none;
+    }
+    button[type="submit"]:hover {
+        background-color: #2980b9;
+    }
+ 
+</style>
+</head>
+<body>
+    <div>
+    <h1>Generate QR Code</h1>
+    <form action="/generate_qr" method="POST">
+      
+        <label for="text_input">Enter text for QR Code below</label>
+        <br>
+    
+        <input type="text" id="text_input" name="text_input" required>
+         
+         <br>
+         <Br>
+        <button type="submit">Generate QR Code</button>
+    </form>
+    </div>
+</body>
+</html>

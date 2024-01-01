@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Code Image</title>
+    <style>
+           body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden; 
+        }
+        .top-section {
+            margin-bottom: 20px;
+        }
+        /* .qr-container {
+            max-width: 50vw;
+            max-height: 50vh;
+        } */
+        img {
+            width: 400px;
+            height: 400px;
+        
+        }
+        .download-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .download-link:hover { 
+            background-color: #2980b9;
+        }
+           
+    </style>
+</head>
+<body>
+    <div class="top-section">
+        <h1>Generated QR Code</h1>
+       
+        <div class="qr-container">
+            <img src="{{ qr_image_base64 }}" alt="QR Code">     
+        </div>
+        <a href="{{ qr_image_base64 }}" download="qrcode.png" class="download-link">Download QR Code</a>
+    </div>
+
+    </div>
+</body>
+</html>
